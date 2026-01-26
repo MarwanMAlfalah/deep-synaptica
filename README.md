@@ -65,7 +65,7 @@ Logical flow:
 ### 1️⃣ Clone Repository
 
 ``` bash
-git clone https://github.com/your-username/deep-synaptica.git
+git clone https://github.com/MarwanMAlfalah/deep-synaptica.git
 cd deep-synaptica
 ```
 
