@@ -14,5 +14,5 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(health.router)
-app.include_router(runs.router)
+app.include_router(health.router, tags=["default"])
+app.include_router(runs.router, tags=["runs"])
