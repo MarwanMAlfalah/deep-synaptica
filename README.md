@@ -154,14 +154,12 @@ The research goal is instrumentation and reproducible run inspection. A controll
 
 ## Limitations
 
-- Deep Synaptica is currently an MVP / research prototype rather than a production observability platform. JSONL/file-based persistence supports experimentation, not high-scale production.
-- End-to-end runtime and tracing integration remains incomplete, so run creation and subsequent summary persistence cannot yet complete. Tracing coverage is still evolving; automatic failure-event capture is not yet available.
-- Persisted trace information is not yet surfaced uniformly across API summaries and dashboard views. The API reads separate JSON summaries rather than JSONL events, and some summary fields are not displayed consistently in the dashboard.
-- Automated CI validation is currently limited and should not be interpreted as evidence of production readiness.
-- The current system does not yet provide a validated benchmark for agent quality or validated comparative performance results.
-- Provider/runtime coverage is limited to Groq and a fixed three-call learning-plan workflow, without tool execution.
+- Deep Synaptica is currently an MVP / research prototype rather than a production observability platform. JSONL/file-based persistence is intended for experimentation, not high-scale deployment.
+- End-to-end integration across agent execution, trace persistence, API summaries, and dashboard views is still evolving, and tracing coverage does not yet capture every runtime or failure event automatically.
+- The current system does not yet provide a validated benchmark for agent quality or comparative performance results.
+- Provider/runtime coverage is currently limited to Groq and a fixed learning-plan workflow; general tool-executing agents are not yet supported.
 - Recorded traces represent observable execution events; they do not expose hidden chain-of-thought, establish causal explanations, or provide model interpretability.
-- Reproducibility is limited by the absence of full model configuration and original request metadata in traces. Timestamps and version labels alone do not establish reproducible experiments.
+- Reproducibility metadata is still incomplete; fuller model configuration and request metadata will be required for controlled cross-run experiments.
 
 ## Technical Stack
 
